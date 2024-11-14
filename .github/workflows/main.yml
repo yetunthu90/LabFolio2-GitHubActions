@@ -19,6 +19,6 @@ jobs:
     steps:
       - uses: alex-page/github-project-automation-plus@v0.8.3
         with:
-          project: yetunthu90/LabFolio2-GitHubActions/Projects/project1
-          column: InProgres
+          project: project1
+          column: InProgress
           repo-token: ${{ secrets.PythonCodeToken  }}
