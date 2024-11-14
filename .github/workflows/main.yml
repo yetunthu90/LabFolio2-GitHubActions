@@ -7,8 +7,7 @@ on:
 permissions:
   issues: write
   contents: write
-  projects: write  # Ensure that you have the right permissions to access GitHub Projects
-
+ 
 jobs:
   move_issue:
     runs-on: ubuntu-latest
