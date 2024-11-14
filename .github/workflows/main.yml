@@ -27,4 +27,4 @@ jobs:
           project: 'Python Code'  # Ensure this matches your project name
           column: 'In Progress'   # Ensure this is the correct column name
           action: 'update'
-          token: ${{ secrets.GITHUB_TOKEN }}  # Ensure this is passed correctly
+          token: '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' # Ensure this is passed correctly
