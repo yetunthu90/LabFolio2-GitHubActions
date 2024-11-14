@@ -7,19 +7,18 @@
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
 
-name: Move assigned card
+
+name: Move new issues into Triage
 on:
   issues:
-    types:
-      - assigned
+    types: [assigned]
+
 jobs:
-  move-assigned-card:
+  automate-project-columns:
     runs-on: ubuntu-latest
     steps:
-      - uses: alex-page/github-project-automation-plus@v0.9.0
+      - uses: alex-page/github-project-automation-plus@v0.8.3
         with:
           project: project1
           column: InProgress
           repo-token: ${{ secrets.PythonCodeToken  }}
- 
-
