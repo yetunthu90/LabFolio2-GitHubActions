@@ -72,6 +72,4 @@ jobs:
               } else {
                 console.log("Card not found in Backlogs column.");
               }
-            } catch (error) {
-              console.error("Error encountered while interacting with GitHub Projects API:", error);
-            }
+            
