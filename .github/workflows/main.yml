@@ -34,16 +34,6 @@ jobs:
             const issueNumber = context.payload.issue.number;
             console.log("Retrieving projects for repository:", owner, "/", repoName);
 
-            try {
-              const projects = await github.projects.listForRepo({
-                owner: owner,
-                repo: repoName
-              });
-
-              if (!projects || !projects.data) {
-                throw new Error('No projects found or failed to retrieve projects');
-              }
-
               const project = projects.data.find(proj => proj.name === projectName);  // Match project by name
               if (!project) {
                 console.log("Project not found.");
