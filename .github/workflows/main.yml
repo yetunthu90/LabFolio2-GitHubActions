@@ -7,24 +7,17 @@
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
 
-name: Move Issue to In Progress
-
+name: Move assigned card
 on:
   issues:
-    types: [labeled, assigned]
-
-permissions:
-  issues: write
-  contents: write
-
+    types:
+      - assigned
 jobs:
-  move_assigned_card:
+  move-assigned-card:
     runs-on: ubuntu-latest
     steps:
-      - name: Move card to 'In Progress'
-        uses: alex-page/github-project-automation-plus@7ffb872c64bd809d23563a130a0a97d01dfa8f43
+      - uses: alex-page/github-project-automation-plus@7ffb872c64bd809d23563a130a0a97d01dfa8f43
         with:
-          project: 'Python Code'  # Ensure this matches your project name
-          column: 'In Progress'   # Ensure this is the correct column name
-          action: 'update'
-          token: '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' # Ensure this is passed correctly
+          project: Python Code
+          column: In Progress
+          repo-token: ${{ secrets.PythonCodeToken }}
